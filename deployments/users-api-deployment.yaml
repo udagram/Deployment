@@ -1,11 +1,12 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  labels:
-    service: users-api
   name: users-api
 spec:
   replicas: 1
+  selectors:
+    matchLabels:
+      service: users-api
   template:
     metadata:
       labels:

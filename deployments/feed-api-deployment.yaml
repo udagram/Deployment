@@ -1,11 +1,12 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  labels:
-    service: feed-api
   name: feed-api
 spec:
   replicas: 1
+  selectors:
+    matchLabels:
+      service: feed-api
   template:
     metadata:
       labels:

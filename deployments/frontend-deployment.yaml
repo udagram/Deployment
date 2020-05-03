@@ -1,11 +1,12 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  labels:
-    service: frontend
   name: frontend
 spec:
   replicas: 2
+  selectors:
+    matchLabels:
+      service: frontend
   template:
     metadata:
       labels:
