@@ -4,7 +4,7 @@ metadata:
   name: users-api
 spec:
   replicas: 1
-  selectors:
+  selector:
     matchLabels:
       service: users-api
   template:

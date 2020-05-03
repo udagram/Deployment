@@ -4,7 +4,7 @@ metadata:
   name: feed-api
 spec:
   replicas: 1
-  selectors:
+  selector:
     matchLabels:
       service: feed-api
   template:
